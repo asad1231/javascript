@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{width: 400px; height: 300px;}
+	div{background: pink; text-align: center; width:400px; height: 350px;}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	let i = 1;
+	const next = () =>{
+		i++;
+		if(i > 8){
+			i = 1;
+		}
+		changeImg();
+	}
+	const back = () => {
+		i--;
+		if(i < 1){
+			i = 8;
+		}
+		changeImg();
+	}
+	
+	const changeImg = () => {
+		document.getElementById("myImage").src = "images/최근상품0" + i + ".jpg";
+	}
+</script>
+	<div>
+	<img alt="" src="images/최근상품01.jpg" id="myImage">
+	
+		<input type="button" value="이전사진" onclick="back()">
+		<input type="button" value="다음사진" onclick="next()">
+	</div>
+	
+</body>
+</html>
