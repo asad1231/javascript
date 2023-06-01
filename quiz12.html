@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	var userInfo = [
+		{id : "aaa", name : "홍길동", age : 20},
+		{id : "bbb", "name" : "김개똥", "age" : 30},
+		{id : "ccc", name : "고길똥", age : 40},
+	];
+	const allUser = () =>{
+		console.log("실행");
+		let table = "";
+		table += `<table border="1">`;
+		table += "<tr><th>아이디</th> <th>이름</th> <th>나이</th></tr>";
+		for(i = 0; i < userInfo.length; i++){
+			table += "<tr>";
+			table += `<td>${userInfo[i].id}</td>
+			<td>${userInfo[i].name}</td>
+			<td>${userInfo[i].age}</td>`
+			table += "</tr>";
+		}
+		table += "</table>";
+		
+		document.getElementById("table").innerHTML = table;
+		
+	}
+	
+	
+</script>
+	<div id="table">목록을 보여줍니다</div>
+	<hr>
+	<button type="button" onclick="allUser()">모든 회원 보기</button>
+	<hr>
+	<input type="text" id="id" placeholder="input id"><br>
+	<input type="button" value="특정 회원 조회" onclick="">
+	<hr>
+	<input type="text" id="id1" placeholder="input id"><br>
+	<input type="button" value="특정 회원 삭제" onclick="">
+	
+	
+	
+</body>
+</html>

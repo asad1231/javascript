@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	const data = [111,222,333];
+	function printArr(item, index){
+		document.write(`배열 데이터 ${index} = ${item}<br>`);
+	}
+	data.forEach(printArr);
+	
+	document.write(`== foreach ===<br>`);
+	data.forEach((item, index) => {
+		document.write(`배열 데이터 ${index} = ${item}<br>`);
+	})
+	const mapArr = (value) => {
+		return `<b style="color:red;">${value}</b>`;
+	}
+	const mapArr2 = (value) => `<b style="color:blue;">${value}</b>`;
+	const mapData = data.map(mapArr);
+	const mapData22 = data.map(
+			(value) => `<b style="color:blue;">${value}</b>`
+			);
+	
+	
+	document.write(mapData);
+	document.write(mapData22);
+</script>
+</body>
+</html>
