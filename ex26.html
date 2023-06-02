@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	var img;
+	function add(){
+		img = document.createElement("img");
+		img.src = "images/car01.png";
+		img.width = 100;
+		img.style.height = "100px";
+		//img.setAttribute("width", 100);
+		//img.setAttribute("height", 100);
+		//img.setAttribute("src", "images/car01.png");
+		document.getElementById("test").appendChild(img); // 자식으로 계속 내용추가
+		//document.getElementById("test").innerHTML = img;	
+	}
+	const remove = () =>{
+		let items = document.querySelector("#test");
+		console.log( items.childNodes);
+		items.removeChild( items.childNodes[0] );
+		//document.querySelector("img").remove();
+	}
+</script>
+<p id="test">
+	<b>aaa</b>
+	<span>bbb</span>
+</p>
+<a href="#" onclick="add()">[이미지 추가]</a>
+<a href="#" onclick="remove()">[이미지 삭제]</a>
+</body>
+</html>
